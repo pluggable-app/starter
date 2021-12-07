@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
+const path = require('path')
 
 module.exports = (webpackConfigEnv, argv) => {
     return {
@@ -30,9 +31,7 @@ module.exports = (webpackConfigEnv, argv) => {
         },
         devServer: {
             port: 9000,
-            historyApiFallback: {
-                index: 'index.html'
-            }
+            historyApiFallback: true
         },
         plugins: [
             new webpack.DefinePlugin({
