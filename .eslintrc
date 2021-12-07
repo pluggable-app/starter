@@ -1,7 +1,8 @@
 {
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
     ],
     "parser": "@babel/eslint-parser",
     "settings": {
@@ -20,6 +21,7 @@
         "jest"
     ],
     "rules": {
-        "semi": 0
+        "semi": 0,
+        "react/react-in-jsx-scope": "off"
     }
 }
