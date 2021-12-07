@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     resolve: {
-        extensions: ['.js', '.jsx', '.json','.scss']
+        extensions: ['.js', '.jsx', '.json', '.scss']
     },
     module: {
         rules: [{
@@ -13,15 +13,15 @@ module.exports = {
         },
         {
             test: /\.css$/,
-            use: ["style-loader","css-loader" ]
+            use: ["style-loader", "css-loader"]
         },
         {
             test: /\.scss$/,
-            use: [
-              "style-loader",
-              "css-loader",
-              "sass-loader",
-            ]
+            use: ["style-loader", "css-loader", "sass-loader"]
+        },
+        {
+            test: /\.(png|gif|jpg|jpeg)$/,
+            use: ["file-loader"]
         }]
     },
     devServer: {
